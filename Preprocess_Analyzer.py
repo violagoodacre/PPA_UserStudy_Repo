@@ -7,7 +7,7 @@
 
 
 
-# In[1]:
+# In[125]:
 
 
 import anywidget
@@ -20,7 +20,7 @@ import warnings
 warnings.filterwarnings('ignore')
 
 
-# In[2]:
+# In[126]:
 
 
 
@@ -447,7 +447,7 @@ class Widget(anywidget.AnyWidget):
               
         //Y scale and Axis
         var y = d3.scaleLinear()
-          .domain([0, 5])
+          .domain([-0.5, 5])
           .range([ height, 0]);
         svG.append("g")
           .call(d3.axisLeft(y));
@@ -533,13 +533,13 @@ class Widget(anywidget.AnyWidget):
 
 
 
-# In[81]:
+# In[ ]:
 
 
 
 
 
-# In[90]:
+# In[137]:
 
 
 def ppa_widget(df1_original, df2_original):
@@ -597,13 +597,14 @@ def ppa_widget(df1_original, df2_original):
 
 
 
-    scaler = MinMaxScaler(feature_range=(0, 4.5))
+    scaler = MinMaxScaler(feature_range=(0, 5.0))
     df_div['change_scale'] = scaler.fit_transform(df_div['change'].values[:, None])
-    df_div['change_scale'] = df_div['change_scale'] + 0.5
+    df_div['change_scale'] = df_div['change_scale']
 
     df_div['label'] = df_div.index
 
     df_change = df_div[["change", "change_log", "change_scale", "label"]]
+        
     return Widget(df=df_change, df2 = df1_num_sum, df3 = df2_num_sum, df4 = df_drop_sum, df5 = df_add_sum, df6 = df_zero)
 
 
@@ -619,14 +620,14 @@ def ppa_widget(df1_original, df2_original):
 
 
 
-# In[5]:
+# In[138]:
 
 
 def my_scaler(var):
     return (5 - 0) * ( (var - min(var)) / (max(var) - min(var)) ) + 0
 
 
-# In[96]:
+# In[139]:
 
 
 def data_format(df1_num):
@@ -665,79 +666,6 @@ def data_format(df1_num):
     return df1_num_sum
 
 
-# In[ ]:
-
-
-
-
-
-# In[91]:
-
-
-#df1 = pd.read_csv("acs2015_county_data_edit.csv")
-#df2 = pd.read_csv("TaskA_Data.csv")
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[109]:
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
+# In[140]:
 
 
