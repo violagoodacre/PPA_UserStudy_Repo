@@ -1,4 +1,4 @@
-CountyId,StateId,RegionId,Male,Female,Poverty,ChildPoverty,CarOwnership,PrivateEmploy,SelfEmploy,Unemploy,AvgCommute,PublicEmploy,AvgAge,AvgDebt
+CountyId,StateId,RegionId,Male,Female,Poverty,ChildPoverty,CarOwnership,PrivateEmploy,SelfEmploy,Unemploy,AvgCommute,PublicEmploy,AvgAge,AvgIncome
 100,1,2,18051,19888,21.715,27.169,59.287,66.054,4.747,6.969,34.542,12.928,42.42,43262.34
 101,1,2,5951,6062,12.827,12.221,70.902,71.811,4.444,8.787,21.008,17.069,51.51,52195.79
 102,1,2,23329,25163,8.484,7.272,81.608,81.911,4.04,4.343,14.746,20.402,80.8,80860.6
