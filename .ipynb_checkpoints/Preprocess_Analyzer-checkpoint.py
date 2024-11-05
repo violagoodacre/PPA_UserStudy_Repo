@@ -15,8 +15,8 @@ def to_json(instance: dict, widget) -> list[dict]:
         "df": instance["df"].to_json(orient="records")
     }
 
-class Widget(anywidget.AnyWidget):
-    _esm = pathlib.Path("index.js")
+class MyWidget(anywidget.AnyWidget):
+    _esm = pathlib.Path("widget.js")
     
     _data = traitlets.Dict().tag(sync=True, to_json=to_json)
     _data2 = traitlets.Dict().tag(sync=True, to_json=to_json)
